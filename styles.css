@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.main-container{
+    border: 1px solid black;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+.chat-list{
+    border: 1px solid black;
+    height: 100vh;
+    width: 25%;
+}
+.inbox{
+    border: 1px solid black;
+    height: 100vh;
+    width: 75%;
+}
+/* Logo */
+.logo-section{
+    display: flex;
+    align-items: center;
+    border: 1px solid black;
+}
+#chatsApp-logo{
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    height: 1.5rem;
+}
+#chatsApp-text{
+    font-size: 0.9rem;
+}
+.chats-option{
+    border: 1px solid black;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    padding-top: 1.5rem;
+    padding-left: 1.5rem;
+}
+#Chats-text{
+    /* padding-top: 1.5rem; */
+    /* padding-left: 1rem; */
+    font-size: 1.3rem;
+    font-weight: bolder;
+}
+#create-chatbot{
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    left: 14.5rem;
+    bottom: 0.1rem;
+    font-weight: 100;
+    background-color: rgb(19, 184, 19);
+    color: white;
+    border-radius: 50px;
+    /* border: 1px solid black; */
+    height: 1.3rem;
+    width: 1.3rem;
+    font-size: 1.1rem;
+}
+.chat-menu-div{
+    position: relative;
+    left:15rem;
+    border-radius: 50px;
+    display: flex;
+    /* border: 1px solid black; */
+    height: 1.5rem;
+    width: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+.chat-menu-div:hover{
+    background-color: rgb(194, 191, 191);
+}
+.menu-dot{
+    border-radius: 10px;
+    background-color: black;
+    margin: 0.1rem;
+    border: 1px solid black;
+    height: 4px;
+    width: 4px;
+}
+/* CHATBOT CREATION */
+.add-chatbot{
+    visibility: hidden;
+    background-color: white;
+    position: relative;
+    top: 2.3rem;
+    left: 7rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(188, 185, 185);
+    height: 2rem;
+    width: 8rem;
+}
+#add-chatbot-text{
+    text-align: center;
+    cursor: pointer;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    width: 7rem;
+}
+#add-chatbot-text:hover{
+    background-color: rgb(194, 191, 191);
+}
+/* SEARCH BOX */
+.search-box{
+    border: 1px solid rebeccapurple;
+    padding: 1rem 1rem;
+}
+#chat-search-box{
+    height: 1.7rem;
+    width: 19.5rem;
+    border-radius: 0.3rem;
+    border-bottom: 0.2rem solid rgb(15, 163, 15);
+}
+input{
+    border: 1px solid rgb(197, 192, 192);
+    padding: 0.6rem;
+}
+/* INBOX */
+/* No chat selected */
+.no-chat-selected{
+    border: 1px solid red;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#chatsApp-bodered-logo{
+    position: relative;
+    bottom: 50px;
+    height: 10rem;
+    width: 10rem;
+    opacity: 0.4;
+    margin-bottom: 3rem;
+}
+#ChatsApp-testing{
+    font-size: 1.5rem;
+    font-weight: bolder;
+    position: relative;
+    bottom: 60px;
+}
+#bug-text{
+    color: grey;
+    position: relative;
+    bottom: 2.5rem;
+    font-weight: lighter;
+}
+#not-encrypted{
+    color: grey;
+    position: absolute;
+    bottom: 5rem;
+}
