@@ -5,18 +5,18 @@
     font-family: sans-serif;
 }
 .main-container{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 100vh;
     width: 100%;
     display: flex;
 }
 .chat-list{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 100vh;
     width: 25%;
 }
 .inbox{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 100vh;
     width: 75%;
 }
@@ -24,7 +24,7 @@
 .logo-section{
     display: flex;
     align-items: center;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 #chatsApp-logo{
     padding-left: 0.5rem;
@@ -35,7 +35,7 @@
     font-size: 0.9rem;
 }
 .chats-option{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     display: flex;
     /* justify-content: center; */
     align-items: center;
@@ -81,7 +81,7 @@
     border-radius: 10px;
     background-color: black;
     margin: 0.1rem;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 4px;
     width: 4px;
 }
@@ -109,10 +109,11 @@
 }
 #add-chatbot-text:hover{
     background-color: rgb(194, 191, 191);
+    transition: 0.2s ease-in-out;
 }
 /* SEARCH BOX */
 .search-box{
-    border: 1px solid rebeccapurple;
+    /* border: 1px solid rebeccapurple; */
     padding: 1rem 1rem;
 }
 #chat-search-box{
@@ -128,7 +129,7 @@ input{
 /* INBOX */
 /* No chat selected */
 .no-chat-selected{
-    border: 1px solid red;
+    border-left: 1px solid rgb(201, 196, 196);
     height: 100vh;
     width: 100%;
     display: flex;
@@ -160,4 +161,42 @@ input{
     color: grey;
     position: absolute;
     bottom: 5rem;
+}
+/* Enter chatbot information */
+.enter-chatbot-information{
+   visibility: hidden;
+    border-radius: 1rem;
+    position: relative;
+    top: 8rem;
+    z-index: 2;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 15rem;
+    width: 25rem;
+    border: 2px solid rgb(231, 222, 222);
+}
+#chatbot-name-input{
+    margin-left: 0.9rem;
+}
+.enter-chatbot-information input{
+    border-radius: 1rem;
+    margin-top: 0.5rem;
+    /* border: none; */
+}
+.chatbot-create-btn{
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    top: 0.6rem;
+    color: white;
+    background-color: black;
+    padding: 0.3rem 1rem;
+    transition: 0.2s ease-in-out;
+}
+.chatbot-create-btn:hover{
+    box-shadow: 0.2rem 0.2rem 0.3rem grey;
+    font-size: 0.9rem;
 }
