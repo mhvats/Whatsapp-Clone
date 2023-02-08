@@ -64,6 +64,7 @@
     font-size: 1.1rem;
 }
 .chat-menu-div{
+    cursor: pointer;
     position: relative;
     left:15rem;
     border-radius: 50px;
@@ -163,6 +164,9 @@ input{
     bottom: 5rem;
 }
 /* Enter chatbot information */
+input:focus{
+    outline: none;
+}
 .enter-chatbot-information{
    visibility: hidden;
     border-radius: 1rem;
@@ -194,9 +198,59 @@ input{
     color: white;
     background-color: black;
     padding: 0.3rem 1rem;
-    transition: 0.2s ease-in-out;
+    /* transition: 0.2s ease-out; */
 }
 .chatbot-create-btn:hover{
     box-shadow: 0.2rem 0.2rem 0.3rem grey;
     font-size: 0.9rem;
+}
+/* Message Box */
+.messages{
+    /* border: 1px solid black; */
+    height: 84vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.chatbot-message-detail{
+    margin-top: 1rem;
+    border-radius: 1rem;
+    /* border: 1px solid black; */
+    width: 95%;
+    height: 7vh;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+}
+.chatbot-message-detail:hover{
+    transition: 0.2s ease-in-out;
+    background-color: rgb(230, 227, 227);
+}
+.chatbot-profile-pic{
+    z-index: 2;
+    margin:0rem 0.5rem;
+    border: 1px solid black;
+    height: 50px;
+    width: 50px;
+    border-radius: 50px;
+}
+.chatbot-name-message{
+    /* border: 1px solid black; */
+    height: 50px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+.chatbot-name{
+    font-weight: 600;
+    margin-top: 0.3rem;
+    /* border: 1px solid black; */
+    height: 22px;
+}
+.chatbot-message{
+    /* border: 1px solid black; */
+    height: 20px;
+    font-size: 0.8rem;
+    color: rgb(48, 46, 46);
 }
