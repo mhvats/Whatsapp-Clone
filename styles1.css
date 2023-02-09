@@ -12,6 +12,8 @@
 }
 .chat-list{
     /* border: 1px solid black; */
+    z-index: 2;
+    box-shadow: 1px 1px 30px rgb(179, 177, 177);
     height: 100vh;
     width: 25%;
 }
@@ -76,7 +78,7 @@
     align-items: center;
 }
 .chat-menu-div:hover{
-    background-color: rgb(194, 191, 191);
+    background-color: rgb(218, 217, 217);
 }
 .menu-dot{
     border-radius: 10px;
@@ -85,6 +87,30 @@
     /* border: 1px solid black; */
     height: 4px;
     width: 4px;
+}
+.more-options{
+    visibility: hidden;
+    position: absolute;
+    left: 19rem;
+    top: 5rem;
+    background-color: white;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    padding:0.2rem 0.5rem;
+}
+.more-options p{
+    cursor: pointer;
+    margin-top: 0.4rem;
+    border-radius: 1rem;
+    text-align: center;
+    width: 100px;
+}
+.more-options p:hover{
+background-color: rgb(218, 217, 217);
 }
 /* CHATBOT CREATION */
 .add-chatbot{
@@ -130,7 +156,7 @@ input{
 /* INBOX */
 /* No chat selected */
 .no-chat-selected{
-    border-left: 1px solid rgb(201, 196, 196);
+    /* border-left: 1px solid rgb(201, 196, 196); */
     height: 100vh;
     width: 100%;
     display: flex;
@@ -163,6 +189,139 @@ input{
     position: absolute;
     bottom: 5rem;
 }
+/* INBOX AREA */
+.inbox-area{
+    /* visibility: hidden; */
+    background-color: white;
+    position: absolute;
+    right: 0;
+    /* border: 1px solid black; */
+    width: 75%;
+    height:100vh;
+}
+.chatbot-info{
+    height: 8vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.userprofile-pic{
+    /* margin-top: 0.5rem; */
+    /* border: 1px solid black; */
+    height: 57px;
+    width: 57px;
+}
+.userprofile-pic-img{
+    margin-left: 0.5rem;
+    border-radius: 50px;
+    height: 57px;
+    width: 57px;
+
+}
+.username-profileInfo{
+    font-weight: 600;
+    margin-left: 1rem;
+    /* border: 1px solid black; */
+    height: 57px;
+    width: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.username{
+    
+    /* border: 1px solid black; */
+    font-weight: 600;
+}
+.profile-info{
+    cursor: pointer;
+    font-size: 0.8rem;
+    /* border: 1px solid black; */
+    font-weight: lighter;
+    color: grey;
+}
+.type-message{
+    /* border: 1px solid black; */
+    display: flex;
+    z-index: 2;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    height: 8vh;
+    width: 100%;
+    box-shadow: 1px 0px 30px rgb(179, 177, 177);
+    text-align: center;
+}
+.text-message{
+    width: 80%;
+    position: relative;
+    left: 1rem;
+    border: none;
+}
+.send-message{
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 0rem 1rem;
+    /* border: 1px solid black; */
+    position: relative;
+    top: 1.6rem;
+    left: 2rem;
+    height: 30%;
+}
+.send-message:hover{
+    background-color: rgb(31, 205, 31);
+    color: white;
+    box-shadow: 1px 5px 10px rgb(179, 177, 177);
+}
+/* Profile pic info box */
+.profile-info-box{
+    visibility: hidden;
+    border-radius:20px ;
+    box-shadow: 10px 5px 40px grey;
+    background-color: white;
+    position: absolute;
+    top: 4rem;
+    right: 22rem;
+    border: 1px solid whitesmoke;
+    z-index: 4;
+    height: 30vh;
+    width: 20%;
+}
+.profile-info-box-priority{
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    height: 15vh;
+    width: 50%;
+    /* border: 1px solid black; */
+}
+.profile-info-box-pic-img{
+    position: relative;
+    top: 1rem;
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+
+}
+.profile-info-box-about{
+    height: 5vh;
+    /* justify-content: center; */
+    align-items: center;
+    color: grey;
+}
+.profile-info-box-number{
+    align-items: center;
+    height: 5vh;
+    color: grey;
+}
+
+.profile-info-box-name{
+    height: 3vh;
+    font-weight: 600;
+    font-size: 1.5rem;
+    align-items: center;
+}
 /* Enter chatbot information */
 input:focus{
     outline: none;
@@ -184,6 +343,18 @@ input:focus{
 }
 #chatbot-name-input{
     margin-left: 0.9rem;
+}
+#chatbot-profile-pic{
+    width: 170px;
+}
+.img-profile{
+    border-radius: 50px;
+    position: relative;
+    right: 2px;
+    bottom: 1px;
+    /* border: 1px solid red; */
+    height: 51px;
+    width: 51px;
 }
 .enter-chatbot-information input{
     border-radius: 1rem;
@@ -214,6 +385,7 @@ input:focus{
     align-items: center;
 }
 .chatbot-message-detail{
+    cursor: pointer;
     margin-top: 1rem;
     border-radius: 1rem;
     /* border: 1px solid black; */
@@ -230,7 +402,7 @@ input:focus{
 .chatbot-profile-pic{
     z-index: 2;
     margin:0rem 0.5rem;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 50px;
     width: 50px;
     border-radius: 50px;

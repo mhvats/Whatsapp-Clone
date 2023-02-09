@@ -1,72 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChatsApp</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>ChatsApp Login</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0 auto;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        .container{
+            background-color: #7ed3c4;
+            border-radius: 2rem;
+            position: relative;
+            top: 15rem;
+            box-shadow: 10px 10px 20px grey;
+            /* border: 1px solid black; */
+            height: 30vh;
+            width: 20%;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+        }
+        .shift{
+            margin: 0.5rem;
+        }
+        input{
+            border: 1px solid grey;
+            border-radius: 1rem;
+            padding:0.5rem 2rem;
+        }
+        input::placeholder{
+            /* padding: 0rem 2rem; */
+            text-align: center;
+        }
+        input:focus, textarea:focus{
+            outline: none;
+        }
+        button{
+            cursor: pointer;
+            border: none;
+            border-radius: 1rem;
+            padding:0.5rem 1rem;
+        }
+        p{
+            text-decoration: underline;
+        }
+    </style>
 </head>
-
 <body>
-    <div class="main-container">
-        <div class="chat-list">
-            <div class="logo-section">
-                <img src="ChatsApp-logo.webp" alt="" id="chatsApp-logo">
-                <p id="chatsApp-text">ChatsApp</p>
-            </div>
-            <div class="chats-option">
-                <p id="Chats-text">Chats</p>
-                <div id="create-chatbot" title="Add ChatBot">+</div>
-                <div class="chat-menu-div" title="More options">
-                    <div class="menu-dot"></div>
-                    <div class="menu-dot"></div>
-                    <div class="menu-dot"></div>
-                </div>
-                <div class="add-chatbot">
-                    <p id="add-chatbot-text">Create ChatBot</p>
-                </div>
-            </div>
-            <div class="search-box" title="Search">
-                <input type="text" name="" placeholder="Search or start a new chat" id="chat-search-box">
-            </div>
-            <div class="messages">
-                <!-- <input type="file"> -->
-                <!-- <div class="chatbot-message-detail">
-                    <div class="chatbot-profile-pic"></div>
-                    <div class="chatbot-name-message">
-                        <div class="chatbot-name">Mehul raj
-                        </div>
-                        <div class="chatbot-message">hi</div>
-                    </div>
-                </div> -->
-            </div>
-        </div>
-        <div class="inbox">
-            <div class="no-chat-selected">
-                <div class="enter-chatbot-information">
-                    <form action="">
-                        <label for="">ChatBot Name:</label>
-                        <input type="text" id="chatbot-name-input"><br>
-                        <label for="">ChatBot Number:</label>
-                        <input type="tel" value="+91" id="chatbot-number-input"><br>
-                    </form>
-                    <div class="btns">
-                        <button class="chatbot-create-btn" id="create-btn">Create</button>
-                        <button class="chatbot-create-btn" id="cancel-btn">Cancel</button>
-                    </div>
-
-                </div>
-                <img src="ChatsApp-bordered-logo.png" alt="" id="chatsApp-bodered-logo">
-                <p id="ChatsApp-testing">ChatsApp</p>
-                <p id="bug-text">Not able to send and receive messages.</p>
-                <p id="bug-text">Can not use on multiple devices, WE ARE IMPROVING!</p>
-                <p id="not-encrypted">no-encryption!</p>
-            </div>
-        </div>
+    <div class="container">
+        <p class="shif">ChatsApp User Login</p>
+        <input type="text" placeholder="User-id" class="shift" id="user">
+        <input type="password" placeholder="Password" class="shift" id="password">
+        <button>Login</button>
     </div>
-    <script src="index.js"></script>
+    <script>
+        var login = document.querySelector("button");
+        var userId = document.querySelector("#user");
+        var pass = document.querySelector("#password");
+        login.addEventListener("click", function(){
+            if(userId.value === "mehul" && pass.value ==="mehul"){
+                window.location.assign("index1.html");
+            }
+            else{
+                alert('Wrong Password');
+            }
+        })
+    </script>
 </body>
-
 </html>
