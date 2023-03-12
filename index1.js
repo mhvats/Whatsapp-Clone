@@ -27,7 +27,6 @@ chatMenuDiv.addEventListener("click", function () {
 logout.addEventListener("click", function () {
     window.location.assign("index.html");
 })
-
 // Toggling of create new chatbot
 createChatBot.addEventListener("click", function () {
     if (addChatBot.style.visibility === "visible") {

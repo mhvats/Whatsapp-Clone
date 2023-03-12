@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChatsApp Login</title>
     <style>
-        *{
+        * {
             padding: 0;
             margin: 0 auto;
             box-sizing: border-box;
             font-family: sans-serif;
         }
-        .container{
+
+        .container {
             background-color: #7ed3c4;
             border-radius: 2rem;
             position: relative;
@@ -26,32 +28,40 @@
             display: flex;
             flex-direction: column;
         }
-        .shift{
+
+        .shift {
             margin: 0.5rem;
         }
-        input{
+
+        input {
             border: 1px solid grey;
             border-radius: 1rem;
-            padding:0.5rem 2rem;
+            padding: 0.5rem 2rem;
         }
-        input::placeholder{
+
+        input::placeholder {
             /* padding: 0rem 2rem; */
             text-align: center;
         }
-        input:focus, textarea:focus{
+
+        input:focus,
+        textarea:focus {
             outline: none;
         }
-        button{
+
+        button {
             cursor: pointer;
             border: none;
             border-radius: 1rem;
-            padding:0.5rem 1rem;
+            padding: 0.5rem 1rem;
         }
-        p{
+
+        p {
             text-decoration: underline;
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <p class="shif">ChatsApp User Login</p>
@@ -63,14 +73,25 @@
         var login = document.querySelector("button");
         var userId = document.querySelector("#user");
         var pass = document.querySelector("#password");
-        login.addEventListener("click", function(){
-            if(userId.value === "mehul" && pass.value ==="mehul"){
+        login.addEventListener("click", function () {
+            if (userId.value === "mehul" && pass.value === "mehul") {
                 window.location.assign("index1.html");
             }
-            else{
+            else {
                 alert('Wrong Password');
+            }
+        })
+        document.addEventListener("keyup", function (e) {
+            if (e.key === "Enter") {
+                if (userId.value === "mehul" && pass.value === "mehul") {
+                    window.location.assign("index1.html");
+                }
+                else {
+                    alert('Wrong Password');
+                }
             }
         })
     </script>
 </body>
+
 </html>
